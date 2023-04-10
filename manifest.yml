@@ -1,0 +1,9 @@
+applications:
+  - name: hello
+    path: target/hello-0.0.1-SNAPSHOT.jar
+    random-route: true
+    memory: 1G
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
+    env:
+      JBP_CONFIG_COMPONENTS: '{jres: ["JavaBuildpack::Jre::SapMachineJRE"]}'
